@@ -1,0 +1,89 @@
+html {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    box-sizing: border-box;
+    padding: 3vw;
+    display: grid;
+    grid-template-rows: 1.5fr repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2vw;
+    width: 60vh;
+    height: 80vh;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 4rem;
+    box-shadow: 0 3px 4px grey;
+    -webkit-box-shadow: 0 3px 4px grey;
+    -moz-box-shadow: 0 3px 4px grey;
+    background-color: rgba(233, 233, 233, 0.5);
+}
+
+
+input {
+    grid-area: 1/1/2/5;
+    outline: none;
+    font-size: 5rem;
+}
+
+.c {
+    grid-area: 2/2/3/4;
+}
+
+.summ {
+    grid-area: 6/3/7/5;
+}
+
+.container > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px grey;
+    -webkit-box-shadow: 0 5px 8px grey;
+    -moz-box-shadow: 0 5px 8px grey;
+}
+
+.btn {
+    background-color:rgba(245, 247, 157, 0.5);
+}
+
+.btn:hover {
+    background-color:rgba(245, 247, 157, 1);
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.number {
+    background-color:rgba(212, 224, 245, 0.5);
+}
+
+.number:hover {
+    background-color:rgba(212, 224, 245, 1);
+}
+
+.operator {
+    background-color:rgba(250, 202, 202, 0.5);
+}
+
+.operator:hover {
+    background-color:rgba(250, 202, 202, 1);
+}
+
+
