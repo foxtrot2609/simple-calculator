@@ -24,15 +24,19 @@ body {
     font-size: 3rem;
     box-shadow: 0 3px 4px grey;
     -webkit-box-shadow: 0 3px 4px grey;
-    -moz-box-shadow: 0 3px 4px grey;
     background-color: rgba(233, 233, 233, 0.5);
 }
 
 
 input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
     grid-area: 1/1/2/5;
     outline: none;
     font-size: 5rem;
+    text-align: right;
+    background-color: white;
 }
 
 .c {
@@ -49,14 +53,8 @@ input {
     align-items: center;
     border: 1px solid black;
     border-radius: 8px;
-    box-shadow: 0 5px 5px grey;
+    box-shadow: 0 5px 8px grey;
     -webkit-box-shadow: 0 5px 8px grey;
-    -moz-box-shadow: 0 5px 8px grey;
-}
-
-#display {
-    text-align: right;
-    background-color: white;
 }
 
 .btn {
@@ -72,7 +70,6 @@ input {
     box-shadow: none;
     box-shadow: none;
     -webkit-box-shadow: none;
-    -moz-box-shadow: none;
 }
 
 .number {
