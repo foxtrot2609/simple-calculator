@@ -12,16 +12,16 @@ body {
 
 .container {
     box-sizing: border-box;
-    padding: 3vw;
+    padding: 3vh;
     display: grid;
     grid-template-rows: 1.5fr repeat(5, 1fr);
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2vw;
-    width: 60vh;
-    height: 80vh;
+    grid-gap: 2vh;
+    width: 56vh;
+    height: 75vh;
     border: 2px solid black;
     border-radius: 15px;
-    font-size: 4rem;
+    font-size: 3rem;
     box-shadow: 0 3px 4px grey;
     -webkit-box-shadow: 0 3px 4px grey;
     -moz-box-shadow: 0 3px 4px grey;
@@ -52,6 +52,11 @@ input {
     box-shadow: 0 5px 5px grey;
     -webkit-box-shadow: 0 5px 8px grey;
     -moz-box-shadow: 0 5px 8px grey;
+}
+
+#display {
+    text-align: right;
+    background-color: white;
 }
 
 .btn {
