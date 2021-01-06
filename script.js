@@ -81,19 +81,19 @@ const pressC = () => {
 for (let i = 0; i < numberBtn.length; i++) {
   let number = numberBtn[i];
   number.addEventListener("click", (e) => {
-    pressNumber(e.target.outerText);
+    pressNumber(e.target.textContent);
   });
 }
 
 for (let i = 0; i < operatorBtn.length; i++) {
   let operator = operatorBtn[i];
   operator.addEventListener("click", (e) => {
-    pressOperator(e.target.outerText);
+    pressOperator(e.target.textContent);
   });
 }
 
 dotBtn.addEventListener("click", (e) => {
-  pressDot(e.target.outerText);
+  pressDot(e.target.textContent);
 });
 
 cBtn.addEventListener("click", pressC);
