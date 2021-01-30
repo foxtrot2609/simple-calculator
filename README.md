@@ -1,6 +1,8 @@
-# simple-calculator
+# Task: Calculator 
 HTML5, CSS3, JS
 
-## Result of work is published at: 
+## Result of my work is published at: 
 
-https://foxtrot2609.github.io/simple-calculator/.
+https://foxtrot2609.github.io/simple-calculator/
+
+
