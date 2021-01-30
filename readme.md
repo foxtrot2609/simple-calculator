@@ -2,4 +2,4 @@
 HTML5, CSS3, JS
 
 ## Result is published at: 
-https://github.com/foxtrot2609/simple-calculator/
+https://foxtrot2609.github.io/simple-calculator/
