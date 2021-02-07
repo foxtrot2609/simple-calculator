@@ -7,9 +7,9 @@ const ceBtn = document.querySelector(".ce");
 const cBtn = document.querySelector(".c");
 const display = document.querySelector("#display");
 
-let MemoryCurrentNumber = 0;
-let MemoryNewNumber = false;
-let MemoryPendingOperation = "";
+let memoryCurrentNumber = 0;
+let memoryNewNumber = false;
+let memoryPendingOperation = "";
 
 // functions
 
