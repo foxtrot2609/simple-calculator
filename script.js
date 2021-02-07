@@ -81,19 +81,17 @@ const pressC = () => {
 
 // events
 
-for (let i = 0; i < numberBtn.length; i++) {
-  let number = numberBtn[i];
+numberBtn.forEach((number) =>
   number.addEventListener("click", (e) => {
     pressNumber(e.target.textContent);
-  });
-}
+  })
+);
 
-for (let i = 0; i < operatorBtn.length; i++) {
-  let operator = operatorBtn[i];
+operatorBtn.forEach((operator) =>
   operator.addEventListener("click", (e) => {
     pressOperator(e.target.textContent);
-  });
-}
+  })
+);
 
 dotBtn.addEventListener("click", (e) => {
   pressDot(e.target.textContent);
