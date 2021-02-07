@@ -61,10 +61,8 @@ const pressDot = (dot) => {
   if (memoryNewNumber) {
     localDotMemory = "0.";
     memoryNewNumber = false;
-  } else {
-    if (localDotMemory.indexOf(".") === -1) {
-      localDotMemory += ".";
-    }
+  } else if (localDotMemory.indexOf(".") === -1) {
+    localDotMemory += ".";
   }
   display.value = localDotMemory;
 };
