@@ -14,9 +14,9 @@ let memoryPendingOperation = "";
 // functions
 
 const pressNumber = (number) => {
-  if (MemoryNewNumber) {
+  if (memoryNewNumber) {
     display.value = number;
-    MemoryNewNumber = false;
+    memoryNewNumber = false;
   } else {
     if (display.value === "0") {
       display.value = number;
@@ -28,34 +28,39 @@ const pressNumber = (number) => {
 
 const pressOperator = (operator) => {
   let localOperationMemory = display.value;
-  
-  if (MemoryNewNumber && MemoryPendingOperation !== "=") {
-    MemoryPendingOperation = operator;
-    display.value = MemoryCurrentNumber;
+
+  if (memoryNewNumber && memoryPendingOperation !== "=") {
+    memoryPendingOperation = operator;
+    display.value = memoryCurrentNumber;
   } else {
-    MemoryNewNumber = true;
-    if (MemoryPendingOperation === "+") {
-      MemoryCurrentNumber += parseFloat(localOperationMemory);
-    } else if (MemoryPendingOperation === "-") {
-      MemoryCurrentNumber -= parseFloat(localOperationMemory);
-    } else if (MemoryPendingOperation === "*") {
-      MemoryCurrentNumber *= parseFloat(localOperationMemory);
-    } else if (MemoryPendingOperation === "/") {
-      MemoryCurrentNumber /= parseFloat(localOperationMemory);
-    } else {
-      MemoryCurrentNumber = parseFloat(localOperationMemory);
+    memoryNewNumber = true;
+    switch (memoryPendingOperation) {
+      case "+":
+        memoryCurrentNumber += parseFloat(localOperationMemory);
+        break;
+      case "-":
+        memoryCurrentNumber -= parseFloat(localOperationMemory);
+        break;
+      case "*":
+        memoryCurrentNumber *= parseFloat(localOperationMemory);
+        break;
+      case "/":
+        memoryCurrentNumber /= parseFloat(localOperationMemory);
+        break;
+      default:
+        memoryCurrentNumber = parseFloat(localOperationMemory);
     }
-    MemoryPendingOperation = operator;
-    display.value = MemoryCurrentNumber;
+    memoryPendingOperation = operator;
+    display.value = memoryCurrentNumber;
   }
 };
 
 const pressDot = (dot) => {
   let localDotMemory = display.value;
 
-  if (MemoryNewNumber) {
+  if (memoryNewNumber) {
     localDotMemory = "0.";
-    MemoryNewNumber = false;
+    memoryNewNumber = false;
   } else {
     if (localDotMemory.indexOf(".") === -1) {
       localDotMemory += ".";
@@ -66,14 +71,14 @@ const pressDot = (dot) => {
 
 const pressCe = () => {
   display.value = "0";
-  MemoryNewNumber = true;
+  memoryNewNumber = true;
 };
 
 const pressC = () => {
-  MemoryCurrentNumber = 0;
-  MemoryNewNumber = false;
-  MemoryPendingOperation = "";
-  display.value = MemoryCurrentNumber;
+  memoryCurrentNumber = 0;
+  memoryNewNumber = false;
+  memoryPendingOperation = "";
+  display.value = memoryCurrentNumber;
 };
 
 // events
